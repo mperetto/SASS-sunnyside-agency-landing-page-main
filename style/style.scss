@@ -1,0 +1,105 @@
+//  Primary Colors
+$soft-red: hsl(7, 99%, 70%);
+$yellow: hsl(51, 100%, 49%);
+$dark-desaturated-cyan: hsl(167, 40%, 24%); //(graphic design text)
+$dark-blue: hsl(198, 62%, 26%); // (photography text)
+$dark-moderate-cyan: hsl(168, 34%, 41%); // (footer)
+
+//  Neutral Colors
+$very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$very-dark-grayish-blue: hsl(213, 9%, 39%);
+$dark-grayish-blue: hsl(232, 10%, 55%);
+$grayish-blue: hsl(210, 4%, 67%);
+$white: hsl(0, 0%, 100%);
+
+:root {
+    /*  Primary Colors  */
+    --soft-red: #{$soft-red};
+    --yellow: #{$yellow};
+    --dark-desaturated-cyan: #{$dark-desaturated-cyan};
+    --dark-blue: #{$dark-blue};
+    --dark-moderate-cyan: #{$dark-moderate-cyan};
+
+    /*  Neutral Colors  */
+    --very-dark-desaturated-blue: #{$very-dark-desaturated-blue};
+    --very-dark-grayish-blue: #{$very-dark-grayish-blue};
+    --dark-grayish-blue: #{$dark-grayish-blue};
+    --grayish-blue: #{$grayish-blue};
+    --white: #{$white};
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+body {
+    /*
+    font-family: 'Barlow', sans-serif;
+
+    font-family: 'Fraunces', serif;
+    */
+    font-size: 18px;
+}
+
+.header {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.nav-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-item {
+    list-style: none;
+    margin: 0 10px;
+}
+
+.navbar__menu {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    min-width: 40%;
+}
+
+/*@media screen and (max-width: 768px) {
+    .navbar__menu {
+        min-width: 60%;
+    }
+}*/
+
+@media screen and (max-width: 500px) {
+    .navbar__menu {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    .header {
+        background-image: url('../images/desktop/image-header.jpg');
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .header {
+        background-image: url('../images/mobile/image-header.jpg');
+    }
+}
