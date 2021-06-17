@@ -94,6 +94,37 @@ body {
     }
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header-title {
+    font-family: 'Fraunces', serif;
+    color: var(--white);
+    margin: 50px 0;
+}
+
+.header-img-arrow {
+    display: block;
+    margin: auto;
+    cursor: pointer;
+    animation: arrowAnimation 3s infinite;
+}
+
+@keyframes arrowAnimation {
+    0%, 100% {
+        padding-top: 0;
+    }
+
+    50% {
+        padding-top: 40px;
+    }
+}
+
 .hamburger-icon {
     display: none;
     cursor: pointer;
