@@ -131,9 +131,9 @@ a {
 .main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: (min-content)[3];
-      grid-template-rows: repeat(3, -webkit-min-content);
-      grid-template-rows: repeat(3, min-content);
+  -ms-grid-rows: (min-content)[2];
+      grid-template-rows: repeat(2, -webkit-min-content);
+      grid-template-rows: repeat(2, min-content);
   -ms-grid-columns: 100%;
       grid-template-columns: 100%;
 }
@@ -247,11 +247,11 @@ a {
           flex-direction: column;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
-          justify-content: end;
+          justify-content: flex-end;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 70px 40px 70px;
+  padding: 0 20px 40px 20px;
 }
 
 .services .services__card .services__card-title {
@@ -279,6 +279,62 @@ a {
 
 .services .services__card:nth-child(2) .services__card-title, .services .services__card:nth-child(2) .services__card-content {
   color: var(--dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    text-align: center;
+    padding: 80px 30px;
+  }
+  .main .row {
+    -ms-grid-rows: (minmax(400px, min-content))[2];
+        grid-template-rows: repeat(2, minmax(400px, -webkit-min-content));
+        grid-template-rows: repeat(2, minmax(400px, min-content));
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .main .row:nth-child(1) .card {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .main .row:nth-child(1) .card .card-link::before {
+    background: var(--yellow);
+  }
+  .main .row:nth-child(1) .main__image {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    background-image: url("../images/desktop/image-transform.jpg");
+  }
+  .main .row:nth-child(2) .card {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .main .row:nth-child(2) .card .card-link::before {
+    background: var(--soft-red);
+  }
+  .main .row:nth-child(2) .main__image {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    background-image: url("../images/desktop/image-stand-out.jpg");
+  }
+  .services .row {
+    -ms-grid-rows: (minmax(500px, max-content))[2];
+        grid-template-rows: repeat(2, minmax(500px, -webkit-max-content));
+        grid-template-rows: repeat(2, minmax(500px, max-content));
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  .services .services__card .services__card-content {
+    width: auto;
+  }
 }
 
 @-webkit-keyframes arrowAnimation {
