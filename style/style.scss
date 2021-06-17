@@ -214,6 +214,52 @@ a {
     }
 }
 
+.services {
+    .row {
+        display: grid;
+        grid-template-rows: minmax(500px, max-content);
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .services__card {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: center;
+        padding: 0 70px 40px 70px;
+
+        .services__card-title {
+            font-family: 'Fraunces', serif;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .services__card-content {
+            font-family: 'Barlow', sans-serif;
+            width: 60%;
+        }
+
+        &:nth-child(1) {
+            background-image: url('../images/desktop/image-graphic-design.jpg');
+
+            & .services__card-title, & .services__card-content {
+                color: var(--dark-desaturated-cyan);
+            }
+        }
+        &:nth-child(2) {
+            background-image: url('../images/desktop/image-photography.jpg');
+
+            & .services__card-title, & .services__card-content {
+                color: var(--dark-blue);
+            }
+        }
+    }
+}
+
 @keyframes arrowAnimation {
     0%, 100% {
         padding-top: 0;
