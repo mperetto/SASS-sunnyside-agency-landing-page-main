@@ -348,6 +348,29 @@ a {
   margin-bottom: 40px;
 }
 
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.projects a {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.projects picture {
+  width: 100%;
+}
+
+.project-image {
+  width: 100%;
+}
+
 @media screen and (max-width: 768px) {
   .card {
     text-align: center;
@@ -478,6 +501,12 @@ a {
   }
   .hamburger-icon {
     display: block;
+  }
+  .projects {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 

@@ -312,6 +312,23 @@ a {
     margin-bottom: 40px;
 }
 
+.projects {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        flex-basis: 100%;
+    }
+
+    picture {
+        width: 100%;
+    }
+}
+
+.project-image {
+    width: 100%;
+}
+
 @media screen and (max-width: 768px) {
 
     .card {
@@ -447,6 +464,10 @@ a {
 
     .hamburger-icon {
         display: block;
+    }
+
+    .projects {
+        flex-direction: column;
     }
 }
 
