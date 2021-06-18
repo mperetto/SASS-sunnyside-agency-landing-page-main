@@ -40,6 +40,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .header {
@@ -369,6 +370,54 @@ a {
 
 .project-image {
   width: 100%;
+}
+
+.footer {
+  font-family: 'Barlow', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 30px;
+  background: rgba(69, 140, 126, 0.6);
+}
+
+.footer__logo {
+  margin-bottom: 40px;
+}
+
+.footer__links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  color: var(--dark-desaturated-cyan);
+  width: 70%;
+  margin-bottom: 40px;
+}
+
+.footer__link:hover {
+  color: var(--white);
+}
+
+.footer__social-link {
+  margin: 0 10px;
+}
+
+.footer__social-link:hover svg path {
+  fill: var(--white) !important;
 }
 
 @media screen and (max-width: 768px) {
